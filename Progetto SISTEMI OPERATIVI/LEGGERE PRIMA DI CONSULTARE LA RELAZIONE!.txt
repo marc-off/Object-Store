@@ -1,0 +1,12 @@
+Ho voluto basare la mia relazione in due aspetti che ho ritenuto piú concreti:
+
+il mio impegno nel voler conseguire il piú possibile le richieste proposte
+dalla consegna, secondo la forma dei commenti agganciati a punti ben precisi
+della consegna;
+
+e il mio impegno nel tenere quanto piú leggibile il codice
+con commenti opportuni che spiegano determinate scelte e determinati step,
+consultabili ad ogni momento.
+
+Spero che l'illustrazione del progetto secondo questo formato sia ben
+esaustiva e priva di aspetti superflui.
