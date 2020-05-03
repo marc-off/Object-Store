@@ -45,19 +45,19 @@ seguenti: numero di client connessi, numero di oggetti nello store, size totale 
 La libreria lato client che fornisce l'accesso all'object store deve fornire all'applicazione cliente le seguenti
 funzioni:
 
-- `**int os_connect(char \*name)**` – inizia la connessione all'object store, registrando il cliente con il
+- `int os_connect(char \*name)` – inizia la connessione all'object store, registrando il cliente con il
     _name_ dato. Restituisce _true_ se la connessione ha avuto successo, _false_ altrimenti. Notate che la
     connessione all'object store è globale per il client.
-- `**int os_store(char \*name, void \*block, size_t len)**` – richiede all'object store la memorizzazione
+- `int os_store(char \*name, void \*block, size_t len)` – richiede all'object store la memorizzazione
     dell'oggetto puntato da _block_ , per una lunghezza _len_ , con il nome _name_. Restituisce _true_ se la
     memorizzazione ha avuto successo, _false_ altrimenti.
-- `**void \*os_retrieve(char \*name)**` – recupera dall'object store l'oggetto precedentemente
+- `void \*os_retrieve(char \*name)` – recupera dall'object store l'oggetto precedentemente
     memorizzatato sotto il nome name. Se il recupero ha avuto successo, restituisce un puntatore a un
     blocco di memoria, allocato dalla funzione, contenente i dati precedentemente memorizzati. In caso
     di errore, restituisce NULL.
-- `**int os_delete(char \*name)**` – cancella l'oggetto di nome _name_ precedentemente memorizzato.
+- `int os_delete(char \*name)` – cancella l'oggetto di nome _name_ precedentemente memorizzato.
     Restituisce _true_ se la cancellazione ha avuto successo, _false_ altrimenti.
-- `**int os_disconnect()**` – chiude la connessione all'object store. Restituisce _true_ se la disconnessione ha
+- `int os_disconnect()` – chiude la connessione all'object store. Restituisce _true_ se la disconnessione ha
     avuto successo, _false_ in caso contrario.
 Tutte le funzioni della libreria devono dialogare con il server tramite il protocollo definito sotto. Gli
 eventuali errori di comunicazione vanno gestiti e segnalati al chiamante tramite valori di ritorno come
